@@ -1,0 +1,55 @@
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+.wrap{
+  margin: 0 auto;
+  padding: 50px 100px;
+  max-width: 1440px;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15%;
+}
+
+#N{
+  width: 100px;
+}
+
+#corp{
+  display: flex;
+  height: 100%;
+  position: relative;
+  width: 10px;
+  left: 50%;
+  transition: all 1s ease;
+}
+
+#corp.active{
+  width: 100%;
+  left: 0;
+}
+
+#corp .member{
+  display: flex;
+  position: relative;
+  width: calc(100%/14);
+  height: 50%;
+  justify-content: center;
+}
+
+#corp .member img{
+  width: auto;
+  height: 100%;
+  position: absolute;
+}
+
+#vincent:hover, #yann:hover, #carla:hover, #antoine:hover, #lola:hover, #bertrand:hover, #anais:hover, #oriane:hover, #thomas:hover, #nathan:hover, #simon:hover, #elina:hover, #lucile:hover, #louise:hover{
+  height: 102%;
+}
