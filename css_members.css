@@ -2,11 +2,11 @@
 body{
   font-family: 'Montserrat', sans-serif;
   background-color: #2B2E31;
-  transition: all 0.5s ease;
+  transition: all 1.5s ease;
 }
 .wrap{
   margin: 0 auto;
-  padding: 50px 100px;
+  padding: 0px 100px;
   max-width: 1440px;
   height: calc(100vh - 100px);
   display: flex;
@@ -21,7 +21,9 @@ header{
 }
 
 #N{
-  width: 100px;
+  width: 70px;
+  top:0;
+  transform: translateY(-10px);
 }
 
 #corp{
@@ -41,8 +43,9 @@ header{
 #corp .member{
   display: flex;
   position: relative;
-  width: auto;
   height: 50%;
+  width: auto;
+  transition: all 1s ease;
 }
 
 #corp .member svg{
