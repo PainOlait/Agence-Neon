@@ -15,10 +15,11 @@ body{
 }
 
 header{
-  height: 20%;
   display: flex;
+  height: 50%;
   justify-content: center;
-  margin-bottom: 15%;
+  margin-bottom: 5%;
+  width: 100%;
 }
 
 #N{
@@ -29,9 +30,9 @@ header{
 }
 
 #N:hover{
-  width: 80px;
   cursor: url('cursor.png'), auto;
 }
+
 
 #corp{
   display: flex;
@@ -39,6 +40,7 @@ header{
   position: relative;
   width: 10px;
   transition: all 1s ease;
+  left: -30px;
 }
 
 #corp.active{
@@ -68,16 +70,14 @@ header{
   transition: all 1s ease;
   left: 0;
   padding: 0 15px;
-
 }
+
 
 #corp .member .jaune{
   z-index: 0;
   align-items: center;
   position: relative;
-  transition: all 1s ease;
-  /* top: -20px;
-  left: 5px; */
+  transition: all 0.7s ease;
   opacity: 0;
   text-align: left;
 }
@@ -100,15 +100,3 @@ header{
   top: 60%;
   left: 11px;
 }
-
-
-/* #one:hover, #two:hover, #three:hover, #four:hover, #five:hover, #six:hover, #seven:hover, #eight:hover, #nine:hover, #ten:hover, #eleven:hover, #twelve:hover, #thirteen:hover, #fourteen:hover{
-
-} */
-
-
-/* #corp .member .noir:hover + .jaune{
-  opacity: 1;
-  top: -20%;
-  transform: translateX(-60px) rotate(15deg) scale(1.5);
-} */

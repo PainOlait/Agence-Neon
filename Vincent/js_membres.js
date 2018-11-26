@@ -1,20 +1,39 @@
 
 $(document).ready(function()
 {
-
   var light = 0;
 
-  $('#N svg').click(function(){
-    if (light == 0) {
-      lightOn();
-      light = 1;
-    }
-    else {
-      lightOff();
-      light = 0;
-    }
-
+    $("#N svg").draggable({
+      axis: 'y',
+      containment: 'header',
+      revert: true,
+      revertDuration: 500,
+      scroll: false,
+      stop: function() {
+        if (light == 0) {
+          lightOn();
+          light = 1;
+        } else {
+          lightOff();
+          light = 0;
+        }
+      }
   });
+
+
+
+
+  // $('#N svg').click(function(){
+  //   if (light == 0) {
+  //     lightOn();
+  //     light = 1;
+  //   }
+  //   else {
+  //     lightOff();
+  //     light = 0;
+  //   }
+  //
+  // });
 
   function lightOn(){
     console.log("bonjour");
