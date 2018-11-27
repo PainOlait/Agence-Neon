@@ -55,6 +55,7 @@ body{
 	font-family: 'Montserrat', sans-serif;
 	background-color: white;
 	color: white;
+	overflow-x:hidden;
 }
 
 /*** NAVIGATION REF :https://codepen.io/anon/pen/wQjXJNt***/
