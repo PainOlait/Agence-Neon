@@ -1,0 +1,102 @@
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #2B2E31;
+  transition: all 1.5s ease;
+}
+.wrap{
+  margin: 0 auto;
+  padding: 0px 100px;
+  max-width: 1440px;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header{
+  display: flex;
+  height: 50%;
+  justify-content: center;
+  margin-bottom: 5%;
+  width: 100%;
+}
+
+#N{
+  width: 70px;
+  top:0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+#N:hover{
+  cursor: url('cursor.png'), auto;
+}
+
+
+#corp{
+  display: flex;
+  height: 100%;
+  position: relative;
+  width: 10px;
+  transition: all 1s ease;
+  left: -30px;
+}
+
+#corp.active{
+  width: 80%;
+  left: 0;
+}
+
+#corp .member{
+  display: flex;
+  position: relative;
+  height: 50%;
+  width: auto;
+  transition: all 0.5s ease;
+}
+
+
+#corp .member .noir{
+    z-index: 1;
+    transition: all 1s ease;
+    transform: rotate(17deg);
+}
+
+#corp .member .noir img{
+  width: auto;
+  height: 100%;
+  position: absolute;
+  transition: all 1s ease;
+  left: 0;
+  padding: 0 15px;
+}
+
+
+#corp .member .jaune{
+  z-index: 0;
+  align-items: center;
+  position: relative;
+  transition: all 0.7s ease;
+  opacity: 0;
+  text-align: left;
+}
+
+#corp .member .jaune svg{
+  width: auto;
+  height: 100%;
+  position: absolute;
+  transition: all 0.7s ease;
+}
+
+
+#corp .member .jaune p{
+  position: absolute;
+  font-size: 22px;
+  transform: rotate(-90deg) translateY(50%);
+  z-index: 1;
+  width: 100%;
+  transform-origin: center;
+  top: 60%;
+  left: 11px;
+}
