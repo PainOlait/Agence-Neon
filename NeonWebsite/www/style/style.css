@@ -1,0 +1,774 @@
+/*------------------- RESET CSS ----------------*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*------------------------CSS-------------------------*/
+
+body{
+	font-family: 'Montserrat', sans-serif;
+	background-color: white;
+	color: white;
+}
+
+/*** NAVIGATION REF :https://codepen.io/anon/pen/wQjXJNt***/
+#borderline{
+	border-left: 0.5px solid #4EC2F0;
+	height: 30vh;
+	transform: translateX(17.5vh);
+}
+
+#borderline:last-child{
+	border-left: 0.5px solid #4EC2F0;
+	height: 50vh;
+	transform: translateX(17.5vh);
+}
+
+
+nav{
+	width: 20vh;
+	transform: translateX(2vh);
+	z-index: 9999;
+}
+ul{
+	list-style: none;
+}
+
+li{
+	text-decoration: none;
+	width: 20vh;
+
+}
+
+nav a{
+	font-family: "Montserrat";
+	font-weight: 300 italic;
+	font-size: 10px;
+	text-decoration: none;
+	color: white;
+}
+
+.number{
+		font-family: 'Allerta Stencil', sans-serif;
+		font-size: 15px;
+		color: white;
+}
+
+.circle{
+	height: 5vh;
+	width: 5vh;
+	border-radius: 50%;
+	 border:2px solid none;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 margin-bottom: 1vh;
+	-webkit-transition: -webkit-transform 0.6s, width 0.5s;
+	-moz-transition: -webkit-transform 0.6s, width 0.5s;
+	transition: transform 0.6s, width 0.5s;
+	opacity: 0;
+	position: relative
+}
+
+
+
+nav .active-section .number{
+	color: black;
+}
+
+
+nav .active-section p{
+	font-size: 25px;
+}
+
+nav .active-section .menutitre{
+	display: flex;	
+/*	flex-direction: row-reverse;*/
+/*	transform: translateX(10vw);*/
+}
+
+.menutitre{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Montserrat";
+	font-weight: 300 italic;
+	font-size: 10px;
+}
+
+
+.circle:hover .active-section{
+	background-color: white;
+	opacity: 1;
+	border:2px solid black;
+}
+
+nav a:hover span, nav .active-section span{
+	background-color: white;
+	color: black;
+	opacity: 1;
+}
+
+/****************** PAGE ACCUEIL LOGO ******************/
+/* SCROLL MOUSE ANMATION */
+* {box-sizing: border-box} html, body {height: 100%; padding: 0; margin: 0}
+body {background: url(https://images.unsplash.com/photo-1518600654093-2a24cddafa38?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=87a81c85209d4feee56ad01a4bfd35af) center no-repeat; background-size:cover}
+
+/* That's it: */
+.mouse {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  width: 26px;
+  height: 46px;
+  border-radius: 13px;
+  border: 2px solid white;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -13px;
+}
+.mouse span {
+  display: block;
+  margin: 6px auto;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid transparent;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+  animation-name: scroll;
+}
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(16px);
+    transform: translateY(16px);
+  }
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(16px);
+    -ms-transform: translateY(16px);
+    transform: translateY(16px);
+  }
+}
+
+
+/** NAVIGATION **/
+.borderline{
+	border-left: 0.5px solid white;
+	height: 30vh;
+	transform: translateX(21.5vh);
+}
+
+.borderline:last-child{
+	border-left: 0.5px solid white;
+	height: 50vh;
+	transform: translateX(21.5vh);
+}
+
+nav{
+	position: fixed;
+	z-index: 9999;
+}
+ul{
+	list-style: none;
+	padding: 0;
+}
+
+li{
+	text-decoration: none;
+}
+
+nav a{
+	font-family: "Montserrat";
+	font-weight: 300 italic;
+	font-size: 10px;
+	text-decoration: none;
+	color: white;
+}
+
+.number{
+		font-family: 'Allerta Stencil', sans-serif;
+		font-size: 15px;
+		color: white;
+}
+
+
+
+.circle{
+	height: 5vh;
+	width: 5vh;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 margin-bottom: 1vh;
+	-webkit-transition: -webkit-transform 0.6s, width 0.5s;
+	-moz-transition: -webkit-transform 0.6s, width 0.5s;
+	transition: transform 0.6s, width 0.5s;
+	opacity: 1;
+}
+
+/*** WHITE ***/
+nav .active-section-white{
+	color:black;
+}
+
+nav a:hover span, nav .active-section-white span{
+	background-color: #4EC2F0;
+	color: white;
+	opacity: 1;
+}
+
+nav .active-section-white p{
+	font-size: 20px;
+}
+
+/*** BLACK ***/
+nav .active-section .number{
+	color: white ;
+}
+
+nav .active-section p{
+	font-size: 20px;
+}
+
+nav .active-section .menutitre{
+	display: flex;
+}
+
+.menutitre{
+	display: flex;
+	justify-content: space-between;
+	font-family: "Montserrat";
+	font-weight: 300 italic;
+	font-size: 10px;
+}
+
+.number{
+	z-index: 10;
+}
+
+.circle:hover .active-section{
+	background-color: black;
+	opacity: 1;
+}
+
+nav a:hover span, nav .active-section span{
+	background-color: #4EC2F0;
+	color: black;
+	opacity: 1;
+}
+/****/
+#pageLogo{
+	height: 100vh;
+	background-image:linear-gradient(#4EC2F0, #0C8BCC);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 99900;
+	position: relative;
+}
+
+#Logo{
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+}
+#logoNeon{
+	width: 100%;
+	padding-bottom: 20px;
+}
+
+#Logo p{
+	font-weight: 600;
+	font-size: 37px;
+}
+
+/* SCROLL */
+#scroll{
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 5vh;
+}
+#downArrow{
+	width: 100%;
+	padding-bottom: 10px;
+}
+
+#scroll p {
+	font-weight: 700 italic;
+	font-size: 10px;
+	opacity: 0.5;
+}
+
+/* TITRE EN TETE SECTIONS */
+.titre{
+	font-size: 200px;
+	font-weight: 900;
+	opacity: 0.15;
+	transform: translateY(-7vh);
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	z-index: 999;
+}
+
+/* LOGO */
+.logoN{
+	position: absolute;
+	top: 20vh;
+}
+
+/****************** PAGE AGENCE PRESENTATION ******************/
+
+#pageAgence{
+	height: 130vh;
+	background-color: #333333;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+}
+
+
+/* TEXT */
+.container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+#textPresentation{
+	font-size: 20px;
+	font-weight: 400;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#textPresentation strong{
+	font-weight: 600;
+	color: #50C2F0;
+	font-size: 30px;
+}
+
+#textPresentation h1{
+	padding: 20px 0px;
+}
+
+#textPresentation p{
+	padding: 5px 0;
+}
+
+#textPresentation{
+		padding: 5px 0;
+}
+#textMegaphone{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	padding-top: 5vh;
+}
+
+#megaphone{
+	width: 10%;
+	margin-right: 20px;
+	margin-left: -30px;
+}
+
+/****************** PAGE MEMBRES ******************/
+#wrapPageMembers{
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: relative;
+}
+
+#dragLogo{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+#slideDown{
+	padding-top: 10px;
+	width: 10%;
+}
+
+#dragLogo p{
+	font-size: 11px;
+	font-weight: 700 italic;
+}
+
+/****************** PAGE PROJETS ******************/
+#wrapPageProjects{
+	height: 130vh;
+	padding: 0 3vw;
+	color: black;
+	position: relative;
+}
+
+#wrapProjectPresentation{
+	height: 120vh;
+	/*background-color: blue;*/
+	display: flex;
+	flex-direction: column;
+}
+
+#logo{
+	/*background-color: mediumpurple;*/
+	display: flex;
+	height: 100%;
+	width: 100%;
+	flex: 1;
+}
+
+#mainContainer{
+	/*background-color: greenyellow;*/
+	display: flex;
+	height: 100%;
+	width: 100%;
+	flex: 3;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-content: flex-end;
+	margin-top: 40vh;
+	padding-left: 20vh;
+}
+
+/** INFOS GAUCHE **/
+#info{
+	/*background-color: aquamarine;*/
+	display: flex;
+	height: 100%;
+	width: 100%;
+	flex:1.5;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#clientInfo{
+	margin-bottom: 30px;
+}
+
+#client{
+	font-size: 8px;
+	font-weight: italic;
+}
+
+.clientNom{
+	font-size: 15px;
+	font-weight: medium;
+}
+
+#competences p{
+	font-size: 15px;
+	font-weight: italic;
+	margin-bottom: 10px;
+}
+
+/** DESCRIPTION CENTRE **/
+#description{
+	/*background-color: azure;*/
+	display: flex;
+	height: 100%;
+	width: 100%;
+	flex: 2.5;
+	flex-direction: column;
+	justify-content:center;
+}
+
+#wrapDescription{
+	display: flex;
+	flex-direction: column;
+	/*background-color: yellowgreen;*/
+	flex: 2;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+#dates{
+	font-size: 15px;
+	font-weight: italic;
+	opacity: 0.8;
+}
+
+#titreProject{
+	font-size: 35px;
+	font-weight: 800;
+	display: flex;
+	flex-direction: column;
+}
+
+#underline{
+	width: 92px;
+}
+
+#descriptionProject{
+	display: flex;
+	flex-direction: column;
+	flex: 3;
+	font-size: 16px;
+	font-weight: 300 italic;
+}
+
+#descriptionProject p{
+
+}
+/** IMAGE DROITE **/
+#corner{
+	width: 5vh;
+}
+#image{
+	/*background-color: blanchedalmond;*/
+	display: flex;
+	flex: 1.5;
+	justify-content: flex-end;
+	align-items: flex-end;
+	margin-left: 10vh;
+	flex-direction: column;
+}
+
+.affiches{
+	background-color: none;
+	width: 90%;
+	height: 90%;
+	box-shadow: 0 0 3em black;
+}
+/* COIX DETAILS */
+#cross{
+	display: flex;
+	flex-direction: row-reverse;
+	transition: all 0.5s ease;
+}
+
+
+#details{
+	display: flex;
+	flex-direction: column;
+	transform: translateY(5vh);
+}
+
+#details p{
+	font-size: 10px;
+	font-weight: 700 italic; 
+	padding-top: 1vh;
+}
+#plus{
+	display: flex;
+	height: 6vh;
+	transition: all 2s ease;
+}
+
+#plus:hover{
+	        -webkit-transform: rotateZ(370deg);
+        -ms-transform: rotateZ(370deg);
+        transform: rotateZ(370deg);
+}
+
+
+
+/** LES DIFFÉRENTS PROJETS **/
+
+#theProjects{
+	/*background-color: mediumpurple;*/
+	display: flex;
+	height: 100%;
+	width: 100%;
+	flex: 0.5;
+	padding-left: 20vh;
+	transform: translateY(10vh);
+	z-index: 1;
+}
+
+#projects{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	position: relative;
+}
+
+.project{
+	width: 100%;
+	height: 100%;
+	margin : 0 1vh;
+	flex-direction: row;
+	/*opacité*/
+	-webkit-transition: -webkit-transform 0.6s, opacity 0.5s;
+	-moz-transition: -webkit-transform 0.6s, opacity 0.5s;
+	transition: transform 0.6s, opacity 0.5s;
+	/*opacité*/
+	-webkit-transition: -webkit-transform 0.6s, opacity 0.5s;
+	-moz-transition: -webkit-transform 0.6s, opacity 0.5s;
+	transition: transform 0.6s, opacity 0.5s;
+}
+
+.project:hover{
+	transform: translateY(-5vh);
+}
+
+
+/****************** PAGE FOOTER ******************/
+#footer{
+ 	width: 100%;
+	height: 75vh;
+	z-index: 1;
+	background-color: #2E2D2C;
+	position: relative;	
+}
+
+#footer .container{
+	height: 100%;
+}
+#borderlinefooter{
+	width: 100%;
+	transform: translateY(-15vh);
+}
+
+#borderlinefooter:last-child{
+	width: 100%;
+	transform: translateY(15vh);
+}
+
+#centerfooter{
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transform: translateY(10vh);
+}
+
+#probleme{
+	padding: 10px;
+}
+#bottomfooter{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transform: translateY(15vh);
+	font-weight: 300;
+	font-size: 12px;
+	opacity: 0.2;
+}
+#centerfooter p{
+	font-size: 22px;
+	font-weight: 900;
+}
+#underlinefooter{
+	width: 20vw;
+}
+#copyright{
+	transform: translateY(22vh);
+	  color: hsl(324, 70%, 45%);
+    animation: wheelHueColor 5s infinite;
+}
+
+@keyframes wheelHueColor {
+    from, to { color: hsl(179, 100%, 50%); }
+
+    50%      { color: hsl(58, 100%, 50%); }
+
+	/*
+    20%      { color: hsl( 36, 80%, 45%); }
+    30%      { color: hsl( 72, 75%, 35%); }
+    40%      { color: hsl(108, 65%, 35%); }
+    50%      { color: hsl(144, 75%, 35%); }
+    60%      { color: hsl(180, 75%, 35%); }
+    70%      { color: hsl(216, 60%, 45%); }
+    80%      { color: hsl(252, 65%, 50%); }
+    90%      { color: hsl(288, 60%, 40%); }
+*/
+}
+
+
+#mail{
+	padding: 10px;
+	-webkit-transition: -webkit-transform 1s, background-color 0.5s,;
+	-moz-transition: -webkit-transform 1s, background-color 0.5s;
+	transition: transform 1s, background-color 1s;
+	/*opacité*/
+	
+	transition: transform  1s, background-color 1s;
+	display: flex;
+	justify-content: center;
+	border-radius: 25px;
+	
+}
+#mail:hover{
+	background-color: #4EC2F0;
+	cursor: pointer;
+}
