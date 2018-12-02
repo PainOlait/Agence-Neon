@@ -189,12 +189,10 @@ header{
   left: -50%;
   height: 100%;
   width: 100%;
-
 }
 
 .content_all.active{
   left: 0%;
-
 }
 
 #antoine, #anais, #bertrand, #carla, #elina, #oriane, #nathan, #louise, #lola, #lucile, #thomas, #simon, #yann, #vincent{
@@ -210,12 +208,20 @@ header{
   justify-content: space-between;
 }
 
+.bars h1{
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: bold;
+  transform: translateX(50%);
+  margin-bottom: 12%;
+}
+
 .bars{
   transform: translateX(100px);
   display: flex;
   flex-direction: column;
   max-width: 40%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .bars div{
@@ -238,11 +244,24 @@ header{
   transform: translateX(80%);
 }
 
-#anais_graphisme, #anais_audiovisuel, #anais_special{
+.skill_1, .skill_2{
   width: 1%;
   background-color: #4EC2F0;
   height: 100%;
   border-radius: 5px;
+}
+
+@keyframes wheelHueColor {
+    from, to { background-color: hsl(179, 100%, 50%); }
+
+    50%      { background-color: hsl(58, 100%, 50%); }
+}
+
+.skill_spec{
+  width: 1%;
+  height: 100%;
+  border-radius: 5px;
+  animation: wheelHueColor 0.4s infinite;
 }
 
 .description{

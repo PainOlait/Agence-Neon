@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   var light = 0;
 
   function lightOn() {
@@ -14,6 +15,7 @@ $(document).ready(function() {
     $('#N .st0').css('fill', '#ffffff');
   }
 
+  //drag and drop
   $("#N svg").draggable({
     axis: 'y',
     containment: 'header',
@@ -31,24 +33,7 @@ $(document).ready(function() {
     }
   });
 
-
-
-
-  // $('#N svg').click(function(){
-  //   if (light == 0) {
-  //     lightOn();
-  //     light = 1;
-  //   }
-  //   else {
-  //     lightOff();
-  //     light = 0;
-  //   }
-  //
-  // });
-
-
-
-
+  //hover sur un membre
   $('#corp .member .noir').hover(function() {
     if (light == 1) {
       $(this).css('transform', 'scale(1.5) rotate(17deg)');
@@ -69,40 +54,60 @@ $(document).ready(function() {
     }
   });
 
-
+  //click sur un membre
   $('#corp .member .noir').click(function() {
     if (light == 1) {
       var theId = $(this).parent().attr('id');
-      console.log(theId);
-      $('#focus .'+theId).css('display', 'flex');
-      $('#photos').html("<img src='photos/grand/"+theId+".jpg'>");
+      $('#focus .' + theId).css('display', 'flex');
+      $('#photos').html("<img src='photos/grand/" + theId + ".jpg'>");
       $('.content_all').addClass('active');
       $('#wrap_a').addClass('remove');
       $('#focus').addClass('active');
       $('#focus .left').addClass('active');
       $('#focus .right').addClass('active');
-      setTimeout(function () {
+      setTimeout(function() {
         lightOff();
       }, 300);
-      setTimeout(function () {
-        progressBar();
-      }, 1500);
+      setTimeout(function(){
+        progressBar(theId);
+      },1500);
     }
   });
 
   // Barres de niveau
-  function progressBar (){
-    var elem = $(".progress div");
+  function progressBar(member) {
+    var locate = member;
+    var max1 = $('.'+locate+' .skill_1').attr('data-number');
+    var max2 = $('.'+locate+' .skill_2').attr('data-number');
+    var max3 = $('.'+locate+' .skill_spec').attr('data-number');
     var width = 1;
-    var id = setInterval(frame, 10);
-    function frame() {
-      if (width >= 80) {
-        clearInterval(id);
+    var grow1 = setInterval(frame1, 10);
+    var grow2 = setInterval(frame2, 12);
+    var grow_spec = setInterval(frame3, 15);
+    function frame1() {
+      if (width >=  max1) {
+        clearInterval(grow1);
       } else {
         width++;
-        elem.css('width', width+'%');
+        $('.'+locate+' .skill_1').css('width', width + '%');
       }
     }
+    function frame2() {
+      if (width >=  max2) {
+        clearInterval(grow2);
+      } else {
+        width++;
+        $('.'+locate+' .skill_2').css('width', width + '%');
+      }
+    }
+      function frame3() {
+        if (width >=  max3) {
+          clearInterval(grow_spec);
+        } else {
+          width++;
+          $('.'+locate+' .skill_spec').css('width', width + '%');
+        }
+      }
   }
 
 });
