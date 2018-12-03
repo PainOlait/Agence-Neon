@@ -159,7 +159,6 @@ nav a:hover span, nav .active-section span{
 /****************** PAGE ACCUEIL LOGO ******************/
 /* SCROLL MOUSE ANMATION */
 * {box-sizing: border-box} html, body {height: 100%; padding: 0; margin: 0}
-body {background: url(https://images.unsplash.com/photo-1518600654093-2a24cddafa38?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=87a81c85209d4feee56ad01a4bfd35af) center no-repeat; background-size:cover}
 
 /* That's it: */
 .mouse {
@@ -373,7 +372,7 @@ nav a:hover span, nav .active-section span{
 
 /* TITRE EN TETE SECTIONS */
 .titre{
-	font-size: 200px;
+	font-size: 150px;
 	font-weight: 900;
 	opacity: 0.15;
 	transform: translateY(-7vh);
@@ -384,6 +383,9 @@ nav a:hover span, nav .active-section span{
 	z-index: 999;
 }
 
+.titre:first-child{
+	margin-top: 3vh;
+}
 /* LOGO */
 .logoN{
 	position: absolute;
@@ -412,7 +414,7 @@ nav a:hover span, nav .active-section span{
 }
 
 #textPresentation{
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 400;
 	display: flex;
 	flex-direction: column;
@@ -427,6 +429,7 @@ nav a:hover span, nav .active-section span{
 
 #textPresentation h1{
 	padding: 20px 0px;
+	padding-bottom: 5vh;
 }
 
 #textPresentation p{
@@ -530,8 +533,8 @@ nav a:hover span, nav .active-section span{
 }
 
 .clientNom{
-	font-size: 15px;
-	font-weight: medium;
+	font-size: 13px;
+	font-weight: bold;
 }
 
 #competences p{
@@ -608,6 +611,7 @@ nav a:hover span, nav .active-section span{
 	box-shadow: 0 0 3em black;
 }
 /* COIX DETAILS */
+/*
 #cross{
 	display: flex;
 	flex-direction: row-reverse;
@@ -639,6 +643,7 @@ nav a:hover span, nav .active-section span{
 }
 
 
+*/
 
 /** LES DIFFÉRENTS PROJETS **/
 

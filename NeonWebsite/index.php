@@ -112,6 +112,7 @@
           <path d="M48,13.7H45.3a2.68,2.68,0,0,0-2.67,2.67V34.09a2.26,2.26,0,0,1-4,1.41L22.12,14.71A2.68,2.68,0,0,0,18.76,14a2.77,2.77,0,0,0-1.39,2.43V48.22c0,.05,0,.11,0,.16a2.66,2.66,0,0,0,2.82,2.49,2.73,2.73,0,0,0,2.49-2.76V30.48a2.26,2.26,0,0,1,4-1.41L43.21,49.86a2.68,2.68,0,0,0,2.08,1A2.7,2.7,0,0,0,48,48.13V21.28a2.12,2.12,0,0,1,.07-.57Z" fill="white"/>
         </svg>
   	     <div class="titre">MEMBRES</div>
+		  
       </div>
 		</section>
 
@@ -235,21 +236,33 @@
 							</div>
 						</div>
   				  </div>
-				<div id="cross"><div id="details"><img id ="plus" src="www/image/plus.svg" alt="détails"><p>Détails</p></div></div>  				
+<!--				<div id="cross"><div id="details"><img id ="plus" src="www/image/plus.svg" alt="détails"><p>Détails</p></div></div>  				-->
 				<!-- LES DIFFÉRENTS PROJETS -->
   				<div id="theProjects">
-				<div id="projects">
-					<div class="project">
-						<img src="www/image/afficheprojets/semainedelentreprise.png" width="100%" onclick="currentSlide(1)"></div>
-					<div class="project"><img src="www/image/afficheprojets/globuleradio.jpg" width="100%"onclick="currentSlide(2)"></div>
-					<div class="project"><img src="www/image/afficheprojets/GeOnG.jpg" width="100%"onclick="currentSlide(3)"></div>
-					<div class="project"><img src="www/image/afficheprojets/mmi&apres.jpg" width="100%"onclick="currentSlide(4)"></div>
-					<div class="project"><img src="www/image/afficheprojets/collegecoterousse.png" width="100%"onclick="currentSlide(5)"></div>
-					<div class="project"><img src="www/image/afficheprojets/baip.png" width="100%"onclick="currentSlide(6)"></div>
+					<div id="projects">
+						<div class="project">
+							<img src="www/image/afficheprojets/semainedelentreprise.png" width="100%" onclick="currentSlide(1)">
+						</div>
+						<div class="project">
+							<img src="www/image/afficheprojets/globuleradio.jpg" width="100%"onclick="currentSlide(2)">
+						</div>
+						<div class="project">
+							<img src="www/image/afficheprojets/GeOnG.jpg" width="100%"onclick="currentSlide(3)">
+						</div>
+						<div class="project">
+							<img src="www/image/afficheprojets/mmi&apres.jpg" width="100%"onclick="currentSlide(4)">
+						</div>
+						<div class="project">
+							<img src="www/image/afficheprojets/collegecoterousse.png" width="100%"onclick="currentSlide(5)">
+						</div>
+						<div class="project">
+							<img src="www/image/afficheprojets/baip.png" width="100%"onclick="currentSlide(6)">
+						</div>
+					</div>
+					
 				</div>
 			</div>
     	</div>
-	</div>
 </section>
 
 
@@ -289,6 +302,5 @@
 <!-- SCRIPT -->
   <script type="text/javascript" src="www/js/jquery.js"></script>
 	<script type="text/javascript" src="www/js/script.js"></script>
-
 </body>
 </html>

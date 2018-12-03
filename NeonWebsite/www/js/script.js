@@ -120,3 +120,14 @@ function showSlides(n) {
   }
   description[slideIndex-1].style.display = "block";
 } 
+
+
+$(window).scroll(function() {
+	var $height = $(window).scrollTop();
+	console.log($height);
+  if($height > 50) {
+		$('#header').addClass('active');
+	} else {
+		$('#header').removeClass('active');
+	}
+});
