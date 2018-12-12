@@ -3,23 +3,32 @@ $(document).ready(function() {
   var light = 0;
   function lightOn() {
     $('#corp').addClass('active');
-    $('body').css('background', 'white');
+    $('#globalwrap').css('background', 'white');
     $('#corp .member').css('width', 'calc(100%/14)');
     $('#N .st0').css('fill', '#4ec2f0');
     $('#corp .default').css('opacity', '0');
     $('#corp .membre .noir').css('cursor', 'default');
+    $('#tuto').html('Éteignez Neon');
+    $('#tuto').css('color', 'black');
+    $('#Capa_1 path').css('fill', 'black');
+    $('#agence_img').css('opacity', '0.3');
+
   }
 
   function lightOff() {
     $('#corp').removeClass('active');
-    $('body').css('background', '#2B2E31');
+    $('#globalwrap').css('background', '#2B2E31');
     $('#N .st0').css('fill', '#ffffff');
     $('#corp .default').css('opacity', '1');
     $('#corp .membre .noir').css('cursor', 'pointer-events');
+    $('#tuto').html('Faites briller Neon');
+    $('#tuto').css('color', 'white');
+    $('#Capa_1 path').css('fill', 'white');
+    $('#agence_img').css('opacity', '0.5');
   }
 
   //drag and drop
-  $("#N svg").draggable({
+  $("#Calque_1").draggable({
     axis: 'y',
     containment: 'header',
     revert: true,
@@ -36,6 +45,17 @@ $(document).ready(function() {
       }
     }
   });
+
+  $('#N #Capa_1').click(function(){
+    if (light == 0) {
+      lightOn();
+      light = 1;
+      //INCREMENT COMPTEUR ALLUMAGE
+    } else {
+      lightOff();
+      light = 0;
+    }
+  })
 
   //hover sur un membre
   $('#corp .member .noir').hover(function() {
@@ -64,7 +84,7 @@ $(document).ready(function() {
       var theId = $(this).parent().attr('id');
       // $(this).parent().find('.jaune').css({'z-index': '300', 'opacity': '1', 'width': '100px', 'position': 'absolute', 'height': '200px'})
       $('#focus .' + theId).css('display', 'flex');
-      $('#photos').html("<img src='photos/grand/" + theId + ".jpg'>");
+      $('#photos').html("<img src='Vincent/photos/grand/" + theId + ".jpg'>");
       $('.content_all').addClass('active');
       $('#wrap_a').addClass('remove');
       $('#focus .left').addClass('active');
@@ -114,6 +134,7 @@ $(document).ready(function() {
       }
   }
 
+  //Fermer focus sur un membre
   $('.cross').click(function(){
     setTimeout(function() {
       lightOn();
